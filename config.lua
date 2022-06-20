@@ -19,18 +19,18 @@ Config.CostMultiplier = 1.0
 
 -- Configure the strings as you wish here.
 Config.Strings = {
-	ExitVehicle = "Exit the vehicle to refuel",
-	EToRefuel = "Press ~g~E ~w~to refuel vehicle",
-	JerryCanEmpty = "Jerry can is empty",
-	FullTank = "Tank is full",
-	PurchaseJerryCan = "Press ~g~E ~w~to purchase a jerry can for ~g~$" .. Config.JerryCanCost,
-	CancelFuelingPump = "Press ~g~E ~w~to cancel the fueling",
-	CancelFuelingJerryCan = "Press ~g~E ~w~to cancel the fueling",
-	NotEnoughCash = "Not enough cash",
-	RefillJerryCan = "Press ~g~E ~w~ to refill the jerry can for ",
-	NotEnoughCashJerryCan = "Not enough cash to refill jerry can",
-	JerryCanFull = "Jerry can is full",
-	TotalCost = "Cost",
+	ExitVehicle = "Aby jsi mohl cerpat palivo musis vystoupit",
+	EToRefuel = "Stiskni ~g~E ~w~pro doplneni paliva",
+	JerryCanEmpty = "Kanystr je prazdny",
+	FullTank = "Nadrz je plna",
+	PurchaseJerryCan = "Stiskni ~g~E ~w~pro zakoupeni kanystru za" .. Config.JerryCanCost .. "~g~CZK",
+	CancelFuelingPump = "Stiskni ~g~E ~w~pro zruseni cerpani paliva",
+	CancelFuelingJerryCan = "Stiskni ~g~E ~w~pro zruseni cerpani paliva",
+	NotEnoughCash = "Nemas dostatek penez",
+	RefillJerryCan = "Stiskni ~g~E ~w~ pro doplneni kanystru ",
+	NotEnoughCashJerryCan = "Nemas dostatek prostredku k doplneni kanystru",
+	JerryCanFull = "Kanystr je plny",
+	TotalCost = "Cena",
 }
 
 Config.PumpModels = {
