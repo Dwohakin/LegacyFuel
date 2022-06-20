@@ -87,13 +87,17 @@ local extraCost = math.random(3, 6)
 
 AddEventHandler('fuel:startFuelUpTick', function(pumpObject, ped, vehicle)
 	currentFuel = GetVehicleFuelLevel(vehicle)
+		
+	nozle = CreateObject(GetHashKey("prop_cs_fuel_nozle"), 0, 0, 0, true, true, true) -- Vytvori objekt
+	AttachEntityToEntity(nozle, ped, GetPedBoneIndex(ped, 0x49D9), 0.1, 0.02, 0.02, 90.0, 40.0, 170.0, true, true, false, true, 1, true) -- V leve ruce
+
 
 	while isFueling do
 		Wait(500)
 
 		local oldFuel = DecorGetFloat(vehicle, Config.FuelDecor)
 		local fuelToAdd = math.random(10, 20) / 10.0
-		--local extraCost = fuelToAdd / 1.5 * Config.CostMultiplier
+		local extraCost = fuelToAdd / 1.5 * Config.CostMultiplier
 
 		if not pumpObject then
 			if GetAmmoInPedWeapon(ped, 883325847) - fuelToAdd * 100 >= 0 then
@@ -126,7 +130,9 @@ AddEventHandler('fuel:startFuelUpTick', function(pumpObject, ped, vehicle)
 	if pumpObject then
 		TriggerServerEvent('fuel:pay', currentCost, GetPlayerServerId(PlayerId()))
 	end
-
+		
+	DeleteEntity(nozle) -- Odstraní pumpovací pistoli
+	
 	currentCost = 0.0
 end)
 
